@@ -2,7 +2,9 @@
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace AudioPlayer
@@ -10,7 +12,7 @@ namespace AudioPlayer
     public partial class MainForm : Form
     {
         private int? numberInteger;
-        private string [] paths;
+        private List<string> paths = new List<string>();
 
         private BlockAlignReductionStream stream = null;
         private WaveOutEvent output = null;
@@ -75,7 +77,7 @@ namespace AudioPlayer
 
             if (ofd.ShowDialog() != DialogResult.OK) return;
             {
-                paths = ofd.FileNames;
+                paths = ofd.FileNames.ToList();
 
                 foreach (var path in paths)
                 {
