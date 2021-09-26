@@ -148,8 +148,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\guitar-nobg.png" />
     <Content Include="Images\guitar.png" />
+    <Content Include="Images\guitar_prev_ui.png" />
     <Content Include="Images\music.ico" />
     <Content Include="Images\music.png" />
     <Content Include="Images\pauseButton.png" />
