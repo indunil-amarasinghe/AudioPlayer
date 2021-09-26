@@ -2,9 +2,7 @@
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace AudioPlayer
@@ -12,10 +10,11 @@ namespace AudioPlayer
     public partial class MainForm : Form
     {
         private int? numberInteger;
-        private List<string> paths = new List<string>();
+        private string [] paths;
 
         private BlockAlignReductionStream stream = null;
         private WaveOutEvent output = null;
+
         public MainForm()
         {
             InitializeComponent();
@@ -42,6 +41,7 @@ namespace AudioPlayer
                 }
             }
         }
+
         /// <summary>
         /// Stops audio
         /// </summary>
@@ -75,7 +75,7 @@ namespace AudioPlayer
 
             if (ofd.ShowDialog() != DialogResult.OK) return;
             {
-                paths = ofd.FileNames.ToList();
+                paths = ofd.FileNames;
 
                 foreach (var path in paths)
                 {
@@ -97,11 +97,11 @@ namespace AudioPlayer
                                     }
                                 }
                             }
-                           
+
                             if (file.Extension.EndsWith(".ogg") || file.Extension.EndsWith(".OGG"))
                             {
                                 using (VorbisWaveReader ogg = new VorbisWaveReader(path))
-                                { 
+                                {
                                     PopulateVorbisTaggingToGrid(path, fileName);
                                     CheckDuplicatesInGrid();
                                 }
@@ -115,10 +115,9 @@ namespace AudioPlayer
                         lstMusicBoxView.Visible = true;
                         this.Cursor = Cursors.WaitCursor;
                     }
-
                     catch (Exception exc)
                     {
-                        
+                        string message = exc.Message;
                     }
                 }
             }
@@ -166,8 +165,7 @@ namespace AudioPlayer
             lvi.SubItems.Add(size);
 
             lstMusicBoxView.Items.Add(lvi);
-            lvi.Text = path;
-
+            lvi.Text = fileName;
         }
 
         /// <summary>
@@ -212,7 +210,7 @@ namespace AudioPlayer
             lvi.SubItems.Add(size);
 
             lstMusicBoxView.Items.Add(lvi);
-            lvi.Text = path;
+            lvi.Text = fileName;
         }
 
         private void btnSelectSong_Click(object sender, EventArgs e)
@@ -251,7 +249,7 @@ namespace AudioPlayer
                         return;
                     }
 
-                    if(lstMusicBoxView.SelectedItems[listCount - 1].Text.EndsWith(".ogg") || lstMusicBoxView.SelectedItems[listCount - 1].Text.EndsWith(".OGG"))
+                    if (lstMusicBoxView.SelectedItems[listCount - 1].Text.EndsWith(".ogg") || lstMusicBoxView.SelectedItems[listCount - 1].Text.EndsWith(".OGG"))
                     {
                         string fileName = lstMusicBoxView.SelectedItems[listCount - 1].Text;
                         var vorbisFile = new VorbisWaveReader(fileName);
@@ -275,7 +273,6 @@ namespace AudioPlayer
             {
                 if (output.PlaybackState == PlaybackState.Paused) output.Play();
             }
-
             catch (NullReferenceException exc)
             {
                 string message = exc.Message;

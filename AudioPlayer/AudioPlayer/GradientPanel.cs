@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace AudioPlayer
 {
-    internal class GradientPanel : Panel
+    public class GradientPanel : Panel
     {
         public Color TopColor { get; set; }
         public Color BottomColor { get; set; }
