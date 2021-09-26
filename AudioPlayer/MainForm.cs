@@ -324,5 +324,10 @@ namespace AudioPlayer
             ToolTip piano = new ToolTip();
             piano.SetToolTip(ptbPiano, "Grand Piano");
         }
+
+        private void lstMusicBoxView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DisposeWave();
+        }
     }
 }

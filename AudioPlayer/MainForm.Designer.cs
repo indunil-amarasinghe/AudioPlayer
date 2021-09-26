@@ -100,11 +100,12 @@ namespace AudioPlayer
             this.lstMusicBoxView.Location = new System.Drawing.Point(264, 89);
             this.lstMusicBoxView.MultiSelect = false;
             this.lstMusicBoxView.Name = "lstMusicBoxView";
-            this.lstMusicBoxView.Size = new System.Drawing.Size(1415, 326);
+            this.lstMusicBoxView.Size = new System.Drawing.Size(1415, 209);
             this.lstMusicBoxView.TabIndex = 9;
             this.lstMusicBoxView.UseCompatibleStateImageBehavior = false;
             this.lstMusicBoxView.View = System.Windows.Forms.View.Details;
             this.lstMusicBoxView.Visible = false;
+            this.lstMusicBoxView.SelectedIndexChanged += new System.EventHandler(this.lstMusicBoxView_SelectedIndexChanged);
             this.lstMusicBoxView.MouseLeave += new System.EventHandler(this.lstMusicBoxView_MouseLeave);
             // 
             // columnHeader1
@@ -174,7 +175,7 @@ namespace AudioPlayer
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnStop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStop.ImageLocation = "";
-            this.btnStop.Location = new System.Drawing.Point(986, 421);
+            this.btnStop.Location = new System.Drawing.Point(992, 323);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(48, 65);
             this.btnStop.TabIndex = 6;
@@ -190,7 +191,7 @@ namespace AudioPlayer
             this.btnResume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnResume.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResume.ImageLocation = "";
-            this.btnResume.Location = new System.Drawing.Point(889, 421);
+            this.btnResume.Location = new System.Drawing.Point(895, 323);
             this.btnResume.Name = "btnResume";
             this.btnResume.Size = new System.Drawing.Size(51, 65);
             this.btnResume.TabIndex = 5;
@@ -206,7 +207,7 @@ namespace AudioPlayer
             this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPause.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPause.ImageLocation = "";
-            this.btnPause.Location = new System.Drawing.Point(937, 421);
+            this.btnPause.Location = new System.Drawing.Point(943, 323);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(51, 65);
             this.btnPause.TabIndex = 4;
@@ -222,7 +223,7 @@ namespace AudioPlayer
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlay.ImageLocation = "";
-            this.btnPlay.Location = new System.Drawing.Point(838, 421);
+            this.btnPlay.Location = new System.Drawing.Point(844, 323);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(52, 65);
             this.btnPlay.TabIndex = 3;
