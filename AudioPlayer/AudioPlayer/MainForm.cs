@@ -157,17 +157,9 @@ namespace AudioPlayer
                 numberInteger = (int)taggedMusic.Tag.Track;
             }
 
-            ListViewItem lvi = new ListViewItem(path);
-            lvi.SubItems.Add(album);
-            lvi.SubItems.Add(numberInteger.ToString());
-            lvi.SubItems.Add(fileName);
-            lvi.SubItems.Add(lengthDuration);
-            lvi.SubItems.Add(artist);
-            lvi.SubItems.Add(composer);
-            lvi.SubItems.Add(size);
-
+            string [] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, composer, size };
+            ListViewItem lvi = new ListViewItem(listItems);
             lstMusicBoxView.Items.Add(lvi);
-            lvi.Text = fileName;
         }
 
         /// <summary>
@@ -202,17 +194,9 @@ namespace AudioPlayer
                 numberInteger = (int)taggedMusic.Tag.Track;
             }
 
-            ListViewItem lvi = new ListViewItem(path);
-            lvi.SubItems.Add(album);
-            lvi.SubItems.Add(numberInteger.ToString());
-            lvi.SubItems.Add(fileName);
-            lvi.SubItems.Add(lengthDuration);
-            lvi.SubItems.Add(artist);
-            lvi.SubItems.Add(composer);
-            lvi.SubItems.Add(size);
-
+            string [] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, composer, size };
+            ListViewItem lvi = new ListViewItem(listItems);
             lstMusicBoxView.Items.Add(lvi);
-            lvi.Text = fileName;
         }
 
         private void btnSelectSong_Click(object sender, EventArgs e)
@@ -239,11 +223,11 @@ namespace AudioPlayer
 
                 if (lstMusicBoxView.SelectedItems[listCount - 1].Selected == true)
                 {
-                    if (lstMusicBoxView.SelectedItems[listCount - 1].Text.EndsWith(".mp3") || lstMusicBoxView.SelectedItems[listCount - 1].Text.EndsWith(".wav") || lstMusicBoxView.SelectedItems[listCount - 1].Text.EndsWith(".wma") || lstMusicBoxView.SelectedItems[listCount - 1].Text.EndsWith(".MP3") || lstMusicBoxView.SelectedItems[listCount - 1].Text.EndsWith(".WAV") || lstMusicBoxView.SelectedItems[listCount - 1].Text.EndsWith(".WMA"))
-                    {
-                        string fileName = lstMusicBoxView.SelectedItems[listCount - 1].Text;
+                    string pathString = lstMusicBoxView.SelectedItems[listCount - 1].SubItems[0].Text;
 
-                        var audioFile = new AudioFileReader(fileName);
+                    if (pathString.EndsWith(".mp3") || pathString.EndsWith(".wav") || pathString.EndsWith(".wma") || pathString.EndsWith(".MP3") || pathString.EndsWith(".WAV") || pathString.EndsWith(".WMA"))
+                    {
+                        var audioFile = new AudioFileReader(pathString);
                         var trimmed = new OffsetSampleProvider(audioFile);
                         output = new WaveOutEvent();
                         output.Init(trimmed);
@@ -251,10 +235,10 @@ namespace AudioPlayer
                         return;
                     }
 
-                    if (lstMusicBoxView.SelectedItems[listCount - 1].Text.EndsWith(".ogg") || lstMusicBoxView.SelectedItems[listCount - 1].Text.EndsWith(".OGG"))
+                    if (pathString.EndsWith(".ogg") || pathString.EndsWith(".OGG"))
                     {
                         string fileName = lstMusicBoxView.SelectedItems[listCount - 1].Text;
-                        var vorbisFile = new VorbisWaveReader(fileName);
+                        var vorbisFile = new VorbisWaveReader(pathString);
                         output = new WaveOutEvent();
                         output.Init(vorbisFile);
                         output.Play();

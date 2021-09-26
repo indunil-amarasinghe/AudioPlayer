@@ -32,15 +32,6 @@ namespace AudioPlayer
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlBottom = new AudioPlayer.GradientPanel();
             this.lblMessage = new System.Windows.Forms.Label();
-            this.lstMusicBoxView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnStop = new System.Windows.Forms.PictureBox();
             this.btnResume = new System.Windows.Forms.PictureBox();
             this.btnPause = new System.Windows.Forms.PictureBox();
@@ -51,6 +42,15 @@ namespace AudioPlayer
             this.pnlRight = new AudioPlayer.GradientPanel();
             this.pnlLeft = new AudioPlayer.GradientPanel();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.lstMusicBoxView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnResume)).BeginInit();
@@ -66,8 +66,8 @@ namespace AudioPlayer
             this.pnlBottom.BackColor = System.Drawing.Color.DarkGreen;
             this.pnlBottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBottom.BottomColor = System.Drawing.Color.Empty;
-            this.pnlBottom.Controls.Add(this.lblMessage);
             this.pnlBottom.Controls.Add(this.lstMusicBoxView);
+            this.pnlBottom.Controls.Add(this.lblMessage);
             this.pnlBottom.Controls.Add(this.btnStop);
             this.pnlBottom.Controls.Add(this.btnResume);
             this.pnlBottom.Controls.Add(this.btnPause);
@@ -91,89 +91,6 @@ namespace AudioPlayer
             this.lblMessage.Size = new System.Drawing.Size(676, 27);
             this.lblMessage.TabIndex = 8;
             this.lblMessage.Text = "Please select audio files of .wav, .wma, .mp3 and .ogg format only";
-            // 
-            // lstMusicBoxView
-            // 
-            this.lstMusicBoxView.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.lstMusicBoxView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
-            this.lstMusicBoxView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lstMusicBoxView.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstMusicBoxView.FullRowSelect = true;
-            this.lstMusicBoxView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lstMusicBoxView.HideSelection = false;
-            this.lstMusicBoxView.Location = new System.Drawing.Point(194, 77);
-            this.lstMusicBoxView.MultiSelect = false;
-            this.lstMusicBoxView.Name = "lstMusicBoxView";
-            this.lstMusicBoxView.Size = new System.Drawing.Size(1415, 326);
-            this.lstMusicBoxView.TabIndex = 7;
-            this.lstMusicBoxView.UseCompatibleStateImageBehavior = false;
-            this.lstMusicBoxView.View = System.Windows.Forms.View.Details;
-            this.lstMusicBoxView.Visible = false;
-            this.lstMusicBoxView.MouseLeave += new System.EventHandler(this.lstMusicBoxView_MouseLeave);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.DisplayIndex = 7;
-            this.columnHeader1.Text = "FilePath";
-            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader1.Width = 0;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.DisplayIndex = 0;
-            this.columnHeader2.Text = "Album";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 400;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.DisplayIndex = 1;
-            this.columnHeader3.Text = "#";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 80;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.DisplayIndex = 2;
-            this.columnHeader4.Text = "Title";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 750;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.DisplayIndex = 3;
-            this.columnHeader5.Text = "Length";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 100;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.DisplayIndex = 4;
-            this.columnHeader6.Text = "Contributing Artist";
-            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader6.Width = 300;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.DisplayIndex = 5;
-            this.columnHeader7.Text = "Composer";
-            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader7.Width = 300;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.DisplayIndex = 6;
-            this.columnHeader8.Text = "Size";
-            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader8.Width = 100;
             // 
             // btnStop
             // 
@@ -320,6 +237,81 @@ namespace AudioPlayer
             this.lblWelcome.TabIndex = 2;
             this.lblWelcome.Text = "Welcome To Creative Digital Studio";
             // 
+            // lstMusicBoxView
+            // 
+            this.lstMusicBoxView.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.lstMusicBoxView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.lstMusicBoxView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lstMusicBoxView.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstMusicBoxView.FullRowSelect = true;
+            this.lstMusicBoxView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lstMusicBoxView.HideSelection = false;
+            this.lstMusicBoxView.Location = new System.Drawing.Point(264, 89);
+            this.lstMusicBoxView.MultiSelect = false;
+            this.lstMusicBoxView.Name = "lstMusicBoxView";
+            this.lstMusicBoxView.Size = new System.Drawing.Size(1415, 326);
+            this.lstMusicBoxView.TabIndex = 9;
+            this.lstMusicBoxView.UseCompatibleStateImageBehavior = false;
+            this.lstMusicBoxView.View = System.Windows.Forms.View.Details;
+            this.lstMusicBoxView.Visible = false;
+            this.lstMusicBoxView.MouseLeave += new System.EventHandler(this.lstMusicBoxView_MouseLeave);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "FilePath";
+            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader1.Width = 0;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Album";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 400;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "#";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 80;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Title";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 787;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Length";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 100;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Contributing Artist";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader6.Width = 300;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Composer";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader7.Width = 300;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Size";
+            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader8.Width = 100;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,6 +348,10 @@ namespace AudioPlayer
         private System.Windows.Forms.PictureBox btnResume;
         private System.Windows.Forms.PictureBox btnPause;
         private System.Windows.Forms.PictureBox btnPlay;
+        private System.Windows.Forms.Label lblMessage;
+        private GradientPanel pnlRight;
+        private GradientPanel pnlLeft;
+        private System.Windows.Forms.PictureBox ptbPiano;
         private System.Windows.Forms.ListView lstMusicBoxView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -365,9 +361,5 @@ namespace AudioPlayer
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.Label lblMessage;
-        private GradientPanel pnlRight;
-        private GradientPanel pnlLeft;
-        private System.Windows.Forms.PictureBox ptbPiano;
     }
 }
