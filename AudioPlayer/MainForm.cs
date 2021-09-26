@@ -64,6 +64,24 @@ namespace AudioPlayer
         }
 
         /// <summary>
+        /// Adds Song List to Grid
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="album"></param>
+        /// <param name="numberInteger"></param>
+        /// <param name="fileName"></param>
+        /// <param name="lengthDuration"></param>
+        /// <param name="artist"></param>
+        /// <param name="composer"></param>
+        /// <param name="size"></param>
+        private void AddSongListToGrid(string path,string album, int ?numberInteger, string fileName, string lengthDuration, string artist, string composer, string size)
+        {
+            string [] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, composer, size };
+            ListViewItem lvi = new ListViewItem(listItems);
+            lstMusicBoxView.Items.Add(lvi);
+        }
+
+        /// <summary>
         /// Generates audio grid
         /// </summary>
         private void GenerateGrid()
@@ -157,9 +175,7 @@ namespace AudioPlayer
                 numberInteger = (int)taggedMusic.Tag.Track;
             }
 
-            string [] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, composer, size };
-            ListViewItem lvi = new ListViewItem(listItems);
-            lstMusicBoxView.Items.Add(lvi);
+            AddSongListToGrid(path, album, numberInteger, fileName, lengthDuration, artist, composer, size);
         }
 
         /// <summary>
@@ -194,9 +210,7 @@ namespace AudioPlayer
                 numberInteger = (int)taggedMusic.Tag.Track;
             }
 
-            string [] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, composer, size };
-            ListViewItem lvi = new ListViewItem(listItems);
-            lstMusicBoxView.Items.Add(lvi);
+            AddSongListToGrid(path, album, numberInteger, fileName, lengthDuration, artist, composer, size);
         }
 
         private void btnSelectSong_Click(object sender, EventArgs e)
