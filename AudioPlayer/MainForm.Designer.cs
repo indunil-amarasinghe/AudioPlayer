@@ -51,6 +51,7 @@ namespace AudioPlayer
             this.pnlRight = new AudioPlayer.GradientPanel();
             this.pnlLeft = new AudioPlayer.GradientPanel();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblNoOfRecords = new System.Windows.Forms.Label();
             this.pnlBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnResume)).BeginInit();
@@ -66,6 +67,7 @@ namespace AudioPlayer
             this.pnlBottom.BackColor = System.Drawing.Color.DarkGreen;
             this.pnlBottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBottom.BottomColor = System.Drawing.Color.Empty;
+            this.pnlBottom.Controls.Add(this.lblNoOfRecords);
             this.pnlBottom.Controls.Add(this.lstMusicBoxView);
             this.pnlBottom.Controls.Add(this.lblMessage);
             this.pnlBottom.Controls.Add(this.btnStop);
@@ -314,6 +316,17 @@ namespace AudioPlayer
             this.lblWelcome.TabIndex = 2;
             this.lblWelcome.Text = "Welcome To Creative Digital Studio";
             // 
+            // lblNoOfRecords
+            // 
+            this.lblNoOfRecords.AutoSize = true;
+            this.lblNoOfRecords.BackColor = System.Drawing.Color.Transparent;
+            this.lblNoOfRecords.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoOfRecords.ForeColor = System.Drawing.Color.Green;
+            this.lblNoOfRecords.Location = new System.Drawing.Point(268, 323);
+            this.lblNoOfRecords.Name = "lblNoOfRecords";
+            this.lblNoOfRecords.Size = new System.Drawing.Size(0, 21);
+            this.lblNoOfRecords.TabIndex = 10;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,5 +376,6 @@ namespace AudioPlayer
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.Label lblNoOfRecords;
     }
 }

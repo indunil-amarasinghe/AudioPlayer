@@ -74,9 +74,9 @@ namespace AudioPlayer
         /// <param name="artist"></param>
         /// <param name="composer"></param>
         /// <param name="size"></param>
-        private void AddSongListToGrid(string path,string album, int ?numberInteger, string fileName, string lengthDuration, string artist, string composer, string size)
+        private void AddSongListToGrid(string path, string album, int? numberInteger, string fileName, string lengthDuration, string artist, string composer, string size)
         {
-            string [] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, composer, size };
+            string[] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, composer, size };
             ListViewItem lvi = new ListViewItem(listItems);
             lstMusicBoxView.Items.Add(lvi);
         }
@@ -138,6 +138,16 @@ namespace AudioPlayer
                     catch (Exception exc)
                     {
                         string message = exc.Message;
+                    }
+
+                    if (lstMusicBoxView.Items.Count > 1)
+                    {
+                        lblNoOfRecords.Text = "List contains " + lstMusicBoxView.Items.Count.ToString() + " records";
+                    }
+
+                    else
+                    {
+                        lblNoOfRecords.Text = "List contain " + lstMusicBoxView.Items.Count + " record";
                     }
                 }
             }
