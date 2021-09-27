@@ -76,7 +76,7 @@ namespace AudioPlayer
         /// <param name="size"></param>
         private void AddSongListToGrid(string path, string album, int? numberInteger, string fileName, string lengthDuration, string artist, string composer, string size)
         {
-            string[] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, composer, size };
+            string [] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, composer, size };
             ListViewItem lvi = new ListViewItem(listItems);
             lstMusicBoxView.Items.Add(lvi);
         }
