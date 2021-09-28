@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\AudioPlayer",
-    "\\AudioPlayer\\AudioPlayer"
+    ""
   ],
-  "SelectedNode": "\\AudioPlayer\\AudioPlayer",
+  "SelectedNode": "\\AudioPlayer.sln",
   "PreviewInSolutionExplorer": false
 }

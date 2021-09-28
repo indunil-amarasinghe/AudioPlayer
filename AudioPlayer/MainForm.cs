@@ -139,16 +139,16 @@ namespace AudioPlayer
                     {
                         string message = exc.Message;
                     }
+                }
 
-                    if (lstMusicBoxView.Items.Count > 1)
-                    {
-                        lblNoOfRecords.Text = "List contains " + lstMusicBoxView.Items.Count.ToString() + " records";
-                    }
+                if (lstMusicBoxView.Items.Count > 1)
+                {
+                    lblNoOfRecords.Text = "List contains " + lstMusicBoxView.Items.Count.ToString() + " records";
+                }
 
-                    else
-                    {
-                        lblNoOfRecords.Text = "List contain " + lstMusicBoxView.Items.Count + " record";
-                    }
+                else
+                {
+                    lblNoOfRecords.Text = "List contain " + lstMusicBoxView.Items.Count + " record";
                 }
             }
         }
