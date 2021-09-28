@@ -31,6 +31,7 @@ namespace AudioPlayer
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlBottom = new AudioPlayer.GradientPanel();
+            this.lblNoOfRecords = new System.Windows.Forms.Label();
             this.lstMusicBoxView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -51,7 +52,6 @@ namespace AudioPlayer
             this.pnlRight = new AudioPlayer.GradientPanel();
             this.pnlLeft = new AudioPlayer.GradientPanel();
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.lblNoOfRecords = new System.Windows.Forms.Label();
             this.pnlBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnResume)).BeginInit();
@@ -81,6 +81,17 @@ namespace AudioPlayer
             this.pnlBottom.Size = new System.Drawing.Size(1904, 741);
             this.pnlBottom.TabIndex = 1;
             this.pnlBottom.TopColor = System.Drawing.Color.PaleGreen;
+            // 
+            // lblNoOfRecords
+            // 
+            this.lblNoOfRecords.AutoSize = true;
+            this.lblNoOfRecords.BackColor = System.Drawing.Color.Transparent;
+            this.lblNoOfRecords.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoOfRecords.ForeColor = System.Drawing.Color.Green;
+            this.lblNoOfRecords.Location = new System.Drawing.Point(268, 323);
+            this.lblNoOfRecords.Name = "lblNoOfRecords";
+            this.lblNoOfRecords.Size = new System.Drawing.Size(0, 21);
+            this.lblNoOfRecords.TabIndex = 10;
             // 
             // lstMusicBoxView
             // 
@@ -240,11 +251,11 @@ namespace AudioPlayer
             this.btnSelectSong.FlatAppearance.BorderSize = 0;
             this.btnSelectSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectSong.Font = new System.Drawing.Font("Garamond", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectSong.Location = new System.Drawing.Point(827, 7);
+            this.btnSelectSong.Location = new System.Drawing.Point(773, 4);
             this.btnSelectSong.Name = "btnSelectSong";
-            this.btnSelectSong.Size = new System.Drawing.Size(222, 53);
+            this.btnSelectSong.Size = new System.Drawing.Size(278, 53);
             this.btnSelectSong.TabIndex = 0;
-            this.btnSelectSong.Text = "Select Song";
+            this.btnSelectSong.Text = "Open Audio File";
             this.btnSelectSong.UseVisualStyleBackColor = true;
             this.btnSelectSong.Click += new System.EventHandler(this.btnSelectSong_Click);
             // 
@@ -315,17 +326,6 @@ namespace AudioPlayer
             this.lblWelcome.Size = new System.Drawing.Size(931, 109);
             this.lblWelcome.TabIndex = 2;
             this.lblWelcome.Text = "Welcome To Creative Digital Studio";
-            // 
-            // lblNoOfRecords
-            // 
-            this.lblNoOfRecords.AutoSize = true;
-            this.lblNoOfRecords.BackColor = System.Drawing.Color.Transparent;
-            this.lblNoOfRecords.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoOfRecords.ForeColor = System.Drawing.Color.Green;
-            this.lblNoOfRecords.Location = new System.Drawing.Point(268, 323);
-            this.lblNoOfRecords.Name = "lblNoOfRecords";
-            this.lblNoOfRecords.Size = new System.Drawing.Size(0, 21);
-            this.lblNoOfRecords.TabIndex = 10;
             // 
             // MainForm
             // 
