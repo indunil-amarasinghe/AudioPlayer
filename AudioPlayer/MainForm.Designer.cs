@@ -39,8 +39,6 @@ namespace AudioPlayer
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblMessage = new System.Windows.Forms.Label();
             this.btnStop = new System.Windows.Forms.PictureBox();
             this.btnResume = new System.Windows.Forms.PictureBox();
@@ -102,9 +100,7 @@ namespace AudioPlayer
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
+            this.columnHeader6});
             this.lstMusicBoxView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lstMusicBoxView.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstMusicBoxView.FullRowSelect = true;
@@ -157,18 +153,6 @@ namespace AudioPlayer
             this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader6.Width = 300;
             // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Composer";
-            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader7.Width = 300;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Size";
-            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader8.Width = 100;
-            // 
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
@@ -188,7 +172,7 @@ namespace AudioPlayer
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnStop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStop.ImageLocation = "";
-            this.btnStop.Location = new System.Drawing.Point(992, 323);
+            this.btnStop.Location = new System.Drawing.Point(992, 324);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(48, 65);
             this.btnStop.TabIndex = 6;
@@ -204,7 +188,7 @@ namespace AudioPlayer
             this.btnResume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnResume.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResume.ImageLocation = "";
-            this.btnResume.Location = new System.Drawing.Point(895, 323);
+            this.btnResume.Location = new System.Drawing.Point(895, 324);
             this.btnResume.Name = "btnResume";
             this.btnResume.Size = new System.Drawing.Size(51, 65);
             this.btnResume.TabIndex = 5;
@@ -220,7 +204,7 @@ namespace AudioPlayer
             this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPause.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPause.ImageLocation = "";
-            this.btnPause.Location = new System.Drawing.Point(943, 323);
+            this.btnPause.Location = new System.Drawing.Point(943, 324);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(51, 65);
             this.btnPause.TabIndex = 4;
@@ -236,7 +220,7 @@ namespace AudioPlayer
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlay.ImageLocation = "";
-            this.btnPlay.Location = new System.Drawing.Point(844, 323);
+            this.btnPlay.Location = new System.Drawing.Point(844, 324);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(52, 65);
             this.btnPlay.TabIndex = 3;
@@ -255,7 +239,7 @@ namespace AudioPlayer
             this.btnSelectSong.Name = "btnSelectSong";
             this.btnSelectSong.Size = new System.Drawing.Size(278, 53);
             this.btnSelectSong.TabIndex = 0;
-            this.btnSelectSong.Text = "Open Audio File";
+            this.btnSelectSong.Text = "Open Audio Files";
             this.btnSelectSong.UseVisualStyleBackColor = true;
             this.btnSelectSong.Click += new System.EventHandler(this.btnSelectSong_Click);
             // 
@@ -374,8 +358,6 @@ namespace AudioPlayer
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.Label lblNoOfRecords;
     }
 }

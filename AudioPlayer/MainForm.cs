@@ -35,7 +35,7 @@ namespace AudioPlayer
                 {
                     if (i != j)
                     {
-                        if (lstMusicBoxView.Items[i].Text == lstMusicBoxView.Items[j].Text)
+                        if (lstMusicBoxView.Items[i].SubItems[3].Text == lstMusicBoxView.Items[j].SubItems[3].Text)
                         {
                             lstMusicBoxView.Items[j].Remove();
                         }
@@ -72,11 +72,10 @@ namespace AudioPlayer
         /// <param name="fileName"></param>
         /// <param name="lengthDuration"></param>
         /// <param name="artist"></param>
-        /// <param name="composer"></param>
         /// <param name="size"></param>
-        private void AddSongListToGrid(string path, string album, int? numberInteger, string fileName, string lengthDuration, string artist, string composer, string size)
+        private void AddSongListToGrid(string path, string album, int? numberInteger, string fileName, string lengthDuration, string artist, string size)
         {
-            string [] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, composer, size };
+            string [] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, size };
             ListViewItem lvi = new ListViewItem(listItems);
             lstMusicBoxView.Items.Add(lvi);
         }
@@ -128,12 +127,7 @@ namespace AudioPlayer
                             }
                         }
 
-                        btnPlay.Visible = true;
-                        btnPause.Visible = true;
-                        btnResume.Visible = true;
-                        btnStop.Visible = true;
-                        lstMusicBoxView.Visible = true;
-                        this.Cursor = Cursors.WaitCursor;
+                       this.Cursor = Cursors.WaitCursor;
                     }
                     catch (Exception exc)
                     {
@@ -150,6 +144,12 @@ namespace AudioPlayer
                 {
                     lblNoOfRecords.Text = "List contain " + lstMusicBoxView.Items.Count + " record";
                 }
+
+                btnPlay.Visible = true;
+                btnPause.Visible = true;
+                btnResume.Visible = true;
+                btnStop.Visible = true;
+                lstMusicBoxView.Visible = true;
             }
         }
 
@@ -185,7 +185,7 @@ namespace AudioPlayer
                 numberInteger = (int)taggedMusic.Tag.Track;
             }
 
-            AddSongListToGrid(path, album, numberInteger, fileName, lengthDuration, artist, composer, size);
+            AddSongListToGrid(path, album, numberInteger, fileName, lengthDuration, artist, size);
         }
 
         /// <summary>
@@ -220,7 +220,7 @@ namespace AudioPlayer
                 numberInteger = (int)taggedMusic.Tag.Track;
             }
 
-            AddSongListToGrid(path, album, numberInteger, fileName, lengthDuration, artist, composer, size);
+            AddSongListToGrid(path, album, numberInteger, fileName, lengthDuration, artist, size);
         }
 
         private void btnSelectSong_Click(object sender, EventArgs e)
