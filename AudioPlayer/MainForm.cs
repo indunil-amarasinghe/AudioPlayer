@@ -141,20 +141,17 @@ namespace AudioPlayer
                     }
                 }
 
-                if (lstMusicBoxView.Items.Count > 1)
+                if (lstMusicBoxView.Items.Count >= 2)
                 {
                     lblNoOfRecords.Text = "List contains " + lstMusicBoxView.Items.Count.ToString() + " records";
+                    SetVisibility();    
                 }
 
-                else
+                else if(lstMusicBoxView.Items.Count == 1)
                 {
                     lblNoOfRecords.Text = "List contain " + lstMusicBoxView.Items.Count + " record";
+                    SetVisibility();
                 }
-
-                btnPlay.Visible = true;
-                btnPause.Visible = true;
-                btnResume.Visible = true;
-                btnStop.Visible = true;
             }
         }
 
@@ -226,6 +223,19 @@ namespace AudioPlayer
             }
 
             AddSongListToGrid(path, album, numberInteger, fileName, lengthDuration, artist, size);
+        }
+
+        /// <summary>
+        /// Sets Visibility
+        /// </summary>
+        private void SetVisibility()
+        {
+            lblNoOfRecords.Visible = true;
+            lstMusicBoxView.Visible = true;
+            btnPlay.Visible = true;
+            btnPause.Visible = true;
+            btnResume.Visible = true;
+            btnStop.Visible = true;
         }
 
         private void btnSelectSong_Click(object sender, EventArgs e)
