@@ -131,7 +131,8 @@ namespace AudioPlayer
                     }
                     catch (Exception exc)
                     {
-                        string message = exc.Message;
+                        lstMusicBoxView.Visible = false;
+                        lblNoOfRecords.Visible = false;
                     }
                 }
 
