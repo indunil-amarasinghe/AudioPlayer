@@ -133,6 +133,11 @@ namespace AudioPlayer
                     {
                         lstMusicBoxView.Visible = false;
                         lblNoOfRecords.Visible = false;
+
+                        btnPlay.Visible = false;
+                        btnPause.Visible = false;
+                        btnResume.Visible = false;
+                        btnStop.Visible = false;
                     }
                 }
 
@@ -150,7 +155,6 @@ namespace AudioPlayer
                 btnPause.Visible = true;
                 btnResume.Visible = true;
                 btnStop.Visible = true;
-                lstMusicBoxView.Visible = true;
             }
         }
 
