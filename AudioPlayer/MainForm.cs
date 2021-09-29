@@ -173,7 +173,6 @@ namespace AudioPlayer
 
             string album = taggedMusic.Tag.Album;
             string artist = taggedMusic.Tag.FirstPerformer;
-            string composer = taggedMusic.Tag.FirstComposer;
             string size = sizeInMBValue;
 
             numberInteger = (int)taggedMusic.Tag.Track;
@@ -208,7 +207,6 @@ namespace AudioPlayer
 
             string album = taggedMusic.Tag.Album;
             string artist = taggedMusic.Tag.FirstPerformer;
-            string composer = taggedMusic.Tag.FirstComposer;
             string size = sizeInMBValue;
 
             numberInteger = (int)taggedMusic.Tag.Track;
