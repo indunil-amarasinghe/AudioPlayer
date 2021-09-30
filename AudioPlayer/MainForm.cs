@@ -149,7 +149,7 @@ namespace AudioPlayer
 
                 else if(lstMusicBoxView.Items.Count == 1)
                 {
-                    lblNoOfRecords.Text = "List contains " + lstMusicBoxView.Items.Count + " record";
+                    lblNoOfRecords.Text = "List contains only " + lstMusicBoxView.Items.Count + " record";
                     SetVisibility();
                 }
             }
