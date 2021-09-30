@@ -274,7 +274,6 @@ namespace AudioPlayer
 
                     if (pathString.EndsWith(".ogg") || pathString.EndsWith(".OGG"))
                     {
-                        string fileName = lstMusicBoxView.SelectedItems[listCount - 1].Text;
                         var vorbisFile = new VorbisWaveReader(pathString);
                         output = new WaveOutEvent();
                         output.Init(vorbisFile);
