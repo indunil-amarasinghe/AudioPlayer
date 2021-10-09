@@ -75,7 +75,7 @@ namespace AudioPlayer
         /// <param name="size"></param>
         private void AddSongListToGrid(string path, string album, int? numberInteger, string fileName, string lengthDuration, string artist, string size)
         {
-            string [] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, size };
+            string[] listItems = { path, album, numberInteger.ToString(), fileName, lengthDuration, artist, size };
             ListViewItem lvi = new ListViewItem(listItems);
             lstMusicBoxView.Items.Add(lvi);
         }
@@ -127,7 +127,7 @@ namespace AudioPlayer
                             }
                         }
 
-                       this.Cursor = Cursors.WaitCursor;
+                        this.Cursor = Cursors.WaitCursor;
                     }
                     catch (Exception exc)
                     {
@@ -144,10 +144,10 @@ namespace AudioPlayer
                 if (lstMusicBoxView.Items.Count >= 2)
                 {
                     lblNoOfRecords.Text = "List contains " + lstMusicBoxView.Items.Count + " records";
-                    SetVisibility();    
+                    SetVisibility();
                 }
 
-                else if(lstMusicBoxView.Items.Count == 1)
+                else if (lstMusicBoxView.Items.Count == 1)
                 {
                     lblNoOfRecords.Text = "List contains only " + lstMusicBoxView.Items.Count + " record";
                     SetVisibility();
